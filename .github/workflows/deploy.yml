@@ -35,10 +35,10 @@ jobs:
                   npm install
                   npm run build
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@3.7.1
+            - name: Archive production artifacts
+              uses: actions/upload-artifact@v2
               with:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  BRANCH: gh-pages
-                  FOLDER: dist
-                  CLEAN: true
+               name: dist-without-markdown
+               path: |
+                dist
+                !dist/**/*.md
