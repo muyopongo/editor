@@ -10,9 +10,7 @@ export function platform() {
 		return settingsState.developers.simulateOS
 
 	const platform = navigator.platform.toLowerCase()
-	if (platform.includes('win')) return 'win32'
-	else if (platform.includes('linux')) return 'linux'
-	else if (platform.includes('mac')) return 'darwin'
+	return 'linux'
 	
 
 	// Breaks vue components \_o_/
