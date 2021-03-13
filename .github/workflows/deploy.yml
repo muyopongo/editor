@@ -1,7 +1,6 @@
 name: Build and Deploy
-on:
-    release:
-        types: [published]
+on:[push]
+
 jobs:
     build-and-deploy:
         runs-on: macos-latest
